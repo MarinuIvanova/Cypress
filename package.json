@@ -1,0 +1,23 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarinuIvanova/Cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarinuIvanova/Cypress/issues"
+  },
+  "homepage": "https://github.com/MarinuIvanova/Cypress#readme",
+  "dependencies": {
+    "cypress": "^15.4.0"
+  }
+}
