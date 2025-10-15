@@ -6,8 +6,15 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
-    "cy:dashboard": "npx cypress run --record --key 58d92820-1b57-4d35-81ed-525edaa8616d",
-    "cy:run:spec_1": "npx cypress run --spec 'cypress/e2e/spec_1.cy.js'"
+    "cy:dashboard:live": "npx cypress run --config-file cypress-live.config.js --record --key 58d92820-1b57-4d35-81ed-525edaa8616d",
+    "cy:dashboard:staging": "npx cypress run --config-file cypress-staging.config.js --record --key 58d92820-1b57-4d35-81ed-525edaa8616d",
+    "cy:run:spec_1": "npx cypress run --spec 'cypress/e2e/spec_1.cy.js'",
+    "cy:run:spec_2": "npm run cy:run --spec 'cypress/e2e/spec_2.cy.js'",
+    "cy:run:all": "npm run cy:run:spec_1 && npm run cy:run:spec_2",
+    "cy:run:live:chrome": "npx cypress run --config-file cypress-live.config.js --browser chrome",
+    "cy:run:live:electron": "npx cypress run --config-file cypress-live.config.js --browser electron",
+    "cy:run:live:chrome-and-electron": "npm run cy:run:live:chrome && npm run cy:run:live:electron",
+    "cy:run:staging": "npx cypress run --config-file cypress-staging.config.js"
   },
   "repository": {
     "type": "git",
