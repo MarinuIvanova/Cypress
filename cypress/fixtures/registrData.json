@@ -1,0 +1,32 @@
+[
+    {
+        "name": "den",
+        "email": "dfgsg",
+        "password1": "123456!",
+        "password2": "123456!"
+    },
+    {
+       "name": "11213",
+        "email": "fdgsd@gmail.com",
+        "password1": "123456!",
+        "password2": "123456!"
+    },
+    {
+        "name": "oleg",
+        "email": "fdgsd@gmail.com",
+        "password1": "123456!",
+        "password2": ""
+    },
+    {
+        "name": "oleg",
+        "email": "fdgsd@gmail.com",
+        "password1": "56",
+        "password2": "123456!"
+    },
+    {
+       "name": "dasha",
+        "email": "fdgsd@gmail.com",
+        "password1": "123456!",
+        "password2": "123456!"
+    }
+]
