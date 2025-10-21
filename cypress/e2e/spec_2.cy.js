@@ -1,8 +1,8 @@
 describe("template spec", () => {
   beforeEach("login", () => {
     /*cy.visit("");
-    const login = "student";
-    const password = "123456!";
+    const login = "marina_mg";
+    const password = "654321$";
 
     cy.get("#account-menu").click();
     cy.get("#login-item").click();
@@ -76,4 +76,5 @@ describe("template spec", () => {
       "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/account/settings"
     );
   });
+  
 });

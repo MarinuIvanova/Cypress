@@ -35,7 +35,7 @@ Cypress.Commands.add("login", (userName, password) => {
 
   cy.get('button[type="submit"]').click();
 
-  //cy.get("#entity-menu").should("be.visible");
+  
 });
 
 Cypress.Commands.add(
