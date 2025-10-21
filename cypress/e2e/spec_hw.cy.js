@@ -1,16 +1,22 @@
+import { LoginPage } from "../pages/loginPage";
+
 describe("template spec", () => {
-    const currentPassword = "654321%";
-    const newPassword = '654321$'
+  const currentPassword = "654321$";
+  const newPassword = "654321%";
+  let loginUser = new LoginPage();
 
   beforeEach("login", () => {
-    //const currentPassword = "654321$";
-    //const newPassword = '654321%'
-    cy.login("marina_mg", currentPassword);
+    cy.visit("");
+
+    cy.get("#account-menu").click();
+    cy.get("#login-item").click();
+
+    loginUser.loginEnter("marina_mg", currentPassword);
+
     cy.get("#entity-menu").should("be.visible");
   });
 
   it("change password", () => {
-
     //Account
     cy.get("#header-tabs > li:nth-child(6)").click();
     cy.contains("Password").click();
@@ -21,11 +27,9 @@ describe("template spec", () => {
     );
 
     //Password for marina_mg
-    cy.get('#currentPassword').type(currentPassword)
-    cy.get('[data-cy=newPassword]').type(newPassword)
-    cy.get('[data-cy=confirmPassword]').type(newPassword)
-    cy.get('[data-cy=submit]').click()
-
-
+    cy.get("#currentPassword").type(currentPassword);
+    cy.get("[data-cy=newPassword]").type(newPassword);
+    cy.get("[data-cy=confirmPassword]").type(newPassword);
+    cy.get("[data-cy=submit]").click();
   });
 });
