@@ -1,10 +1,12 @@
+const changePasswordSelectors = require("../fixtures/changePasswordSelectors.json")
+
 describe("template spec", () => {
-    const currentPassword = "654321%";
-    const newPassword = '654321$'
+    const currentPassword = "654321$";
+    const newPassword = '654321%'
 
   beforeEach("login", () => {
-    //const currentPassword = "654321$";
-    //const newPassword = '654321%'
+    //const currentPassword = "654321%";
+    //const newPassword = '654321$'
     cy.login("marina_mg", currentPassword);
     cy.get("#entity-menu").should("be.visible");
   });
@@ -21,10 +23,10 @@ describe("template spec", () => {
     );
 
     //Password for marina_mg
-    cy.get('#currentPassword').type(currentPassword)
-    cy.get('[data-cy=newPassword]').type(newPassword)
-    cy.get('[data-cy=confirmPassword]').type(newPassword)
-    cy.get('[data-cy=submit]').click()
+    cy.get(changePasswordSelectors.currentPass).type(currentPassword)
+    cy.get(changePasswordSelectors.newPass).type(newPassword)
+    cy.get(changePasswordSelectors.confirmPass).type(newPassword)
+    cy.get(changePasswordSelectors.submitBtn).click()
 
 
   });
