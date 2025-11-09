@@ -1,1 +1,1 @@
-# Cypress
+# UI automation testing. Cypress
