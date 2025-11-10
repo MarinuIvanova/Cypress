@@ -56,9 +56,11 @@ Cypress.Commands.add(
 );
 
 Cypress.Commands.add("clickSelector", (selector1, selector2, Url) => {
+  let url = Cypress.config("baseUrl")
   cy.get(selector1).click();
   cy.get(selector2).click();
-  cy.url().should("eq", `${Url}`);
+  //cy.url().should("eq", `${Url}`);
+  cy.url().should("eq", `${url}${Url}`);
 });
 
 Cypress.Commands.add("language", (lang, text) => {

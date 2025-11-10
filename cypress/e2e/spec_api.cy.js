@@ -1,6 +1,6 @@
 describe("template spec", () => {
-  const currentPassword = "654321$";
-  const newPassword = "654321%";
+  const currentPassword = "654321%";
+  const newPassword = "654321$";
 
   it("change_password_API", () => {
     cy.request({
