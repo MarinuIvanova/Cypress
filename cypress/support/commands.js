@@ -25,23 +25,19 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add("login", (userName, password) => {
-  cy.visit("");
-
+  cy.visit("/");
   cy.get("#account-menu").click();
   cy.get("#login-item").click();
 
   cy.get("[data-cy=username]").type(`${userName}{enter}`);
   cy.get("[data-cy=password]").type(`${password}{enter}`);
-
   cy.get('button[type="submit"]').click();
-
-  
 });
 
 Cypress.Commands.add(
   "regisration",
   (userName, email, first_password, second_password) => {
-    cy.visit("");
+    cy.visit("/");
     cy.get("#account-menu").click();
     cy.get("[data-cy=register").click();
     cy.get("#register-title").should("be.visible");
@@ -56,10 +52,9 @@ Cypress.Commands.add(
 );
 
 Cypress.Commands.add("clickSelector", (selector1, selector2, Url) => {
-  let url = Cypress.config("baseUrl")
+  let url = Cypress.config("baseUrl");
   cy.get(selector1).click();
   cy.get(selector2).click();
-  //cy.url().should("eq", `${Url}`);
   cy.url().should("eq", `${url}${Url}`);
 });
 

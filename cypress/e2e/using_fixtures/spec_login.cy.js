@@ -1,4 +1,4 @@
-const testData = require("../fixtures/loginData.json");
+const testData = require("../../fixtures/loginData.json");
 
 it("login not valid", () => {
   testData.forEach((element) => {

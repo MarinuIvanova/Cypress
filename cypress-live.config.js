@@ -10,7 +10,8 @@ module.exports = defineConfig({
     },
   },
   env: {
-    login: "marina_mg",
-    password: "654321%",
+    login: "student",
+    password: "123456!",
+    password_current: "654321%"
   },
 });

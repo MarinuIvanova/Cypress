@@ -1,8 +1,4 @@
-const testData = require("../fixtures/registrData.json");
-
-/*it("registration valid", ()=>{
-    cy.registration()
-})*/
+const testData = require("../../fixtures/registrData.json");
 
 it("registration not valid", () => {
   testData.forEach((el) => {

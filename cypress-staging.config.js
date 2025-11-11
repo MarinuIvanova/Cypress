@@ -9,4 +9,9 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  env: {
+    login: "student",
+    password: "123456!",
+    password_current: "654321%"
+  },
 });
